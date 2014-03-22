@@ -1,9 +1,9 @@
-# mount point	fstype		device			[device2]
-/sdcard		datamedia	/dev/null
-/boot           mtd		boot
-/cache		ext4		/dev/block/mmcblk3p3
-/data		ext4		/dev/block/mmcblk3p2
-/misc		mtd		misc
-/external_sd	vfat		/dev/block/mmcblk2p1
-/system		yaffs2		system
-/emmc		vfat		/dev/block/mmcblk3p1
+## recovery                            /recovery                    mtd        defaults recoveryonly
+misc                                /misc                        mtd        defaults recoveryonly                                
+boot                                /boot                        mtd        defaults recoveryonly
+system				    /system			 yaffs2     defaults recoveryonly
+/dev/block/mmcblk3p3		    /cache			 ext4       defaults recoveryonly
+/dev/block/mmcblk3p2                /data                        ext4       defaults recoveryonly
+/dev/block/mmcblk2p1     	    /external_sd  		 auto       defaults recoveryonly
+/dev/block/mmcblk3p1                /emmc                        auto       defaults recoveryonly
+/dev/null			    /sdcard			 datamedia  defaults recoveryonly
